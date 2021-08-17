@@ -14,27 +14,28 @@ public class CoogleSearchTest {
     public void preconditions() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.google.by/");
+
     }
 
-    @Test
+   @Test
     public void test1() throws InterruptedException {
+       driver.get("https://www.google.by/");
         driver.findElement(By.name("q")).sendKeys("Hello world", Keys.ENTER);
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(By.xpath("(//h3)[12]"))).perform();
         driver.findElement(By.xpath("(//h3)[12]")).click();
-        driver.findElement(By.id("firstHeading")).isDisplayed();
-
+        Assert.assertTrue(driver.findElement(By.xpath("//h1[@class=\"h3 font-weight-bold\"]")).isDisplayed());
 
     }
 
-    @Test
+   @Test
     public void test2() {
+        driver.get("https://www.google.by/");
         driver.findElement(By.name("q")).sendKeys("//", Keys.ENTER);
         Assert.assertEquals(driver.findElement(By.xpath("(//p)[1]")).getText(), "По запросу // ничего не найдено. ");
 
     }
-   @AfterTest
+    @AfterTest
     public void postconditions() {
         driver.quit();
     }
