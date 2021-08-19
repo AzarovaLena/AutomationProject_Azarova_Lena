@@ -37,7 +37,7 @@ public class Task_6 {
         driver.findElement(By.cssSelector("#inventory_sidebar_link")).click();
         driver.findElement(By.xpath("//div[contains(text(),'Onesie')]")).click();
         driver.findElement(By.cssSelector("[data-test$=onesie]")).click();
-        driver.findElement(By.tagName("span")).click();
+        driver.findElement(By.cssSelector("[class^=shopping]")).click();
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class=\"inventory_item_name\" and contains(text(),'Backpack')]")).getText(), "Sauce Labs Backpack");
         Assert.assertEquals(driver.findElement(By.xpath("//div[text()=\"29.99\"]")).getText(), "$29.99");
         Assert.assertEquals(driver.findElement(By.cssSelector("[id=\"item_0_title_link\"]")).getText(), "Sauce Labs Bike Light");
