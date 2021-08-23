@@ -35,9 +35,9 @@ public class Task_5 {
     public void test1() throws InterruptedException {
         Select sel = new Select(driver.findElement(By.name("calc_direct")));
         sel.selectByIndex(0);
-        enter ("calc_roomwidth", "3,000");
+        enter ("calc_roomwidth", "5,000");
         enter("calc_roomheight","4,000");
-        enter("calc_lamwidth","1250");
+        enter("calc_lamwidth","1300");
         enter("calc_lamheight","198");
         enter("calc_inpack","10");
         enter("calc_price","400");
@@ -73,8 +73,8 @@ public class Task_5 {
     public void test3() throws InterruptedException {
         Select sel = new Select(driver.findElement(By.name("calc_direct")));
         sel.selectByIndex(1);
-        enter ("calc_roomwidth", "10,000");
-        enter("calc_roomheight","10,000");
+        enter ("calc_roomwidth", "10");
+        enter("calc_roomheight","9");
         enter("calc_lamwidth","120");
         enter("calc_lamheight","80");
         enter("calc_inpack","13");
