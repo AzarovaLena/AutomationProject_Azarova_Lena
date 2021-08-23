@@ -46,7 +46,7 @@ public class Task_5 {
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(By.id("l_trash"))).perform();
         driver.findElement(By.xpath("//*[@class='btn btn-secondary btn-lg tocalc']")).click();
-       Thread.sleep(3000);
+       Thread.sleep(4000);
         List<String> list = new ArrayList<>();
         driver.findElements(By.xpath("//div[@class='col-xs-12 col-sm-12 whiteback']")).forEach(data->System.out.println(data.getText()));
     }
@@ -54,8 +54,8 @@ public class Task_5 {
     public void test2() throws InterruptedException {
         Select sel = new Select(driver.findElement(By.name("calc_direct")));
         sel.selectByIndex(1);
-        enter ("calc_roomwidth", "8,000");
-        enter("calc_roomheight","1,000");
+        enter ("calc_roomwidth", "4,000");
+        enter("calc_roomheight","3,000");
         enter("calc_lamwidth","1000");
         enter("calc_lamheight","250");
         enter("calc_inpack","5");
@@ -89,13 +89,8 @@ public class Task_5 {
         driver.findElements(By.xpath("//div[@class='col-xs-12 col-sm-12 whiteback']")).forEach(data->System.out.println(data.getText()));
     }
     public void enter (String element, String data) {
-        driver.findElement(By.name(element)).clear();
-        driver.findElement(By.name(element)).sendKeys(Keys.BACK_SPACE);
-        driver.findElement(By.name(element)).sendKeys(Keys.BACK_SPACE);
-        driver.findElement(By.name(element)).sendKeys(Keys.BACK_SPACE);
-        driver.findElement(By.name(element)).sendKeys(Keys.BACK_SPACE);
-        driver.findElement(By.name(element)).sendKeys(Keys.BACK_SPACE);
-        driver.findElement(By.name(element)).sendKeys(data);
+        driver.findElement(By.name(element)).sendKeys(Keys.chord(Keys.CANCEL, "a", Keys.DELETE), data, Keys.ENTER);
+
     }
 
    @AfterTest
