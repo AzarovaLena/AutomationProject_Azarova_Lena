@@ -44,7 +44,7 @@ public class Task_6 {
         Assert.assertEquals(driver.findElement(By.xpath("//div[text()=\"9.99\"]")).getText(), "$9.99");
         Assert.assertEquals(driver.findElement(By.id("item_2_title_link")).getText(), "Sauce Labs Onesie");
         Assert.assertEquals(driver.findElement(By.xpath("//div[text()=\"7.99\"]")).getText(), "$7.99");
-
+//test
 
     }
     @AfterTest
