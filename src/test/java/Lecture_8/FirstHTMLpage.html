@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dz Azarova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<table width="80%" height="" border="1">
+    <tbody><tr valign="top">
+        <td colspan="3"><h1 align="center">Рецепт на каждый день</h1></td>
+    </tr>
+
+    <tr valign="top">
+        <td width="15%"><img src="https://www.maggi.ru/data/images/recept/img640x500/recept_3039_mon4.jpg" alt="фото печенья"></td>
+        <td><p id="podzagolovok">Овсяное печенье с медом</p>
+            <div class="vremya" align="center"><i>Время приготовления - 45 мин. </i></div>
+            <ol style="align-content: center;">
+                <li>Примерно треть хлопьев измельчить в муку с помощью блендера</li>
+                <li>Сливочное масло и ложку корицы положить в кострюльку и растопить на слабом огне</li>
+                <li>Добавить мёд, цедру лимона, овсяную муку и оставшиеся хлопья. Затем посолить хорошенько перемешать и дать тесту немного настояться</li>
+                <li>С помощью ложки выложить тесто на противень и отправить в духовку на 20 минут до зарумянивания и появления медового аромата</li>
+
+            </ol>
+        </td>
+        <td width="25%">
+            <p style="padding-left: 20px;"><b>Для рецепта овсяного печенья с медом понадобится:</b></p>
+            <ul>
+                <li>Овсяные хлопья 300 г</li>
+                <li>Сливочное масло 130 г</li>
+                <li>Мед 130 г</li>
+                <li>Лимонная цедра 2 столовые ложки</li>
+                <li>корица 1 столовая ложка</li>
+                <li>Соль по вкусу</li>
+            </ul>
+
+        </td>
+    </tr>
+    <tr valign="middle">
+        <td align="center" colspan="3" height="50px" style="color: white; background-color: green;">Подробнее на:
+            <i>
+                <a href="https://tortlanika.ru/cookies" target="_blank">Сладкая жизнь</a>
+            </i></td>
+
+    </tr>
+
+    </tbody></table>
+<h2>Вы можете оформить заказ</h2>
+
+<table id="table2">
+    <tr>
+        <th>Количество персон</th>
+        <th>Вес, гр.</th>
+        <th>Цена,р.</th>
+    </tr>
+    <tr>
+        <td> 2 персоны</td>
+        <td> 300</td>
+        <td> 20</td>
+    </tr>
+    <tr>
+        <td> 4 персоны</td>
+        <td> 600</td>
+        <td> 35 </td>
+    </tr>
+    <tr>
+        <td> 6 персон</td>
+        <td> 900</td>
+        <td> 55</td>
+    </tr>
+    <tr>
+        <td> 8 персон</td>
+        <td> 1200</td>
+        <td> 70</td>
+    </tr>
+</table>
+<p id="order"> Оформление заказа:</p>
+
+<form action="/action_page.php">
+    <label>Выберите время доставки:</label>
+    <select name="time" id="time">
+        <option value="am">c 9.00 до 14.00</option>
+        <option value="pm">с 14.00 до 21.00</option>
+
+    </select>
+
+</form>
+
+<p>Введите ФИО</p>
+<input type="text" name="name" placeholder="Иванов Иван Иванович">
+<p>Ваш e-mail</p>
+<input type="email" name="email" placeholder="enter you email">
+
+<form action="textarea1.php" method="post">
+    <p><b>Коментарий к заказу:</b></p>
+    <p><textarea rows="10" cols="40" name="text"></textarea></p>
+    <p><button type="button" onclick="alert('Заказ принят!')">Заказать</button></p>
+
+</form>
+
+</body>
+</html>

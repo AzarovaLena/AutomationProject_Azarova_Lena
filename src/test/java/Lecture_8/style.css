@@ -1,0 +1,43 @@
+
+	h1{
+		color: green;
+		font-size: 42px;
+	}
+	.otstup{
+		margin-right: 200px;
+	}
+
+.vremya{
+	 width: 20%;
+	background-color: grey;
+	color: white;
+    float: right;
+	padding: 20px;
+	margin: 20px;
+	}
+
+#podzagolovok {
+font-size: 21px;
+padding: 20px;
+background-color: green;
+color: white;
+}
+#order {
+color: green;
+		font-size: 36px;
+}
+#table2 {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
