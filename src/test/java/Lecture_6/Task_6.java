@@ -1,3 +1,5 @@
+package Lecture_6;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -5,13 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-/*
-1.	Создать отдельный Java-класс Task_6 с тестом, сценарий:
-a.	Залогиниться https://www.saucedemo.com/
-b.	Добавить товар в корзину
-c.	Перейти в корзину
-d.	Проверить (assertEquals) стоимость товара и его имя в корзине
-*/
+
 public class Task_6 {
     WebDriver driver = null;
 
@@ -52,4 +48,4 @@ public class Task_6 {
         driver.quit();
     }
 
-}
+       }

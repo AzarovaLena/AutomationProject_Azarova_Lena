@@ -1,3 +1,5 @@
+package Lecture_5;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -6,9 +8,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /*Написать 3 теста по сценарию ниже с различными данными и вариантами.
@@ -31,10 +35,29 @@ public class Task_5 {
         driver.get("https://masterskayapola.ru/kalkulyator/laminata.html");
     }
 
-   @Test
+    @Test (dataProvider = "dataProvider")
+    public void test(String data){
+
+    }
+    @DataProvider
+    public Object [][] dataProvider(){
+        return new Object[][]{
+                {new HashMap<String, String>(){{
+                    put ("calc_roomwidth", "5,000");
+                    put("calc_roomheight","4,000");
+                    put("calc_lamwidth","1300");
+                    put("calc_lamheight","198");
+                    put("calc_inpack","10");
+                    put("calc_price","400");
+                    put("calc_bias", "250");
+                    put("calc_walldist", "9");
+                }}
+                }
+        };
+    }
+   //@Test
     public void test1() throws InterruptedException {
-        Select sel = new Select(driver.findElement(By.name("calc_direct")));
-        sel.selectByIndex(0);
+        sel().selectByIndex(0);
         enter ("calc_roomwidth", "5,000");
         enter("calc_roomheight","4,000");
         enter("calc_lamwidth","1300");
@@ -50,10 +73,9 @@ public class Task_5 {
         List<String> list = new ArrayList<>();
         driver.findElements(By.xpath("//div[@class='col-xs-12 col-sm-12 whiteback']")).forEach(data->System.out.println(data.getText()));
     }
-    @Test
+   // @Test
     public void test2() throws InterruptedException {
-        Select sel = new Select(driver.findElement(By.name("calc_direct")));
-        sel.selectByIndex(1);
+        sel().selectByIndex(1);
         enter ("calc_roomwidth", "4,000");
         enter("calc_roomheight","3,000");
         enter("calc_lamwidth","1000");
@@ -69,10 +91,9 @@ public class Task_5 {
         List<String> list = new ArrayList<>();
         driver.findElements(By.xpath("//div[@class='col-xs-12 col-sm-12 whiteback']")).forEach(data->System.out.println(data.getText()));
     }
-    @Test
+   // @Test
     public void test3() throws InterruptedException {
-        Select sel = new Select(driver.findElement(By.name("calc_direct")));
-        sel.selectByIndex(1);
+               sel().selectByIndex(1);
         enter ("calc_roomwidth", "10");
         enter("calc_roomheight","9");
         enter("calc_lamwidth","120");
@@ -86,12 +107,16 @@ public class Task_5 {
         driver.findElement(By.xpath("//*[@class='btn btn-secondary btn-lg tocalc']")).click();
         Thread.sleep(3000);
         List<String> list = new ArrayList<>();
-        driver.findElements(By.xpath("//div[@class='col-xs-12 col-sm-12 whiteback']")).forEach(data->System.out.println(data.getText()));
+        driver.findElements(By.xpath("//div[@class='col-xs-12 col-sm-12 whiteback']")).forEach(data->list.add(data.getText()));
     }
     public void enter (String element, String data) {
         driver.findElement(By.name(element)).sendKeys(Keys.chord(Keys.CANCEL, "a", Keys.DELETE), data, Keys.ENTER);
 
     }
+    private Select sel (){
+        return new Select(driver.findElement(By.name("calc_direct")));
+    }
+
 
    @AfterTest
     public void postconditions() {
