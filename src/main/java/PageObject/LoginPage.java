@@ -26,7 +26,11 @@ public class LoginPage extends BasePage{
         return this;
     }
     public LoginPage checkErrorText(String expectedText){
-        Assert.assertEquals(getElementText(errorText), expectedText);
+        Assert.assertEquals(getElementText(this.errorText), expectedText);
+        return this;
+    }
+    public LoginPage NoErrorText (){
+        verifyNoElements(this.errorText);
         return this;
     }
 

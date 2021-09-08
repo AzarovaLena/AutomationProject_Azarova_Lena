@@ -26,8 +26,8 @@ public class BasePage {
         return driver.findElement(element).getText();
     }
 
-    protected void countElementsIsDisplayed (By element, int amountElements) {
-        Assert.assertTrue( driver.findElements(element).size()== amountElements);
+    protected void countElementsIsDisplayed(By element, int amountElements) {
+        Assert.assertTrue(driver.findElements(element).size() == amountElements);
     }
 
     protected void displayElements(By... elements) {
@@ -35,16 +35,19 @@ public class BasePage {
             Assert.assertTrue(driver.findElement(element).isDisplayed());
         }
     }
-    protected boolean verifyNoElements(By element) {
-        try
-        {if(driver.findElement(element).isDisplayed())
-            {return false;
-            }return false;
-        } catch(Exception e)
-        {return true;
-        }
 
+    protected boolean verifyNoElements(By element) {
+        try {
+            if (driver.findElement(element).isDisplayed()) {
+                return false;
+            }
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
     }
+
 }
+
 
 

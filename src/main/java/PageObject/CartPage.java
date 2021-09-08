@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 
 public class CartPage extends BasePage{
     private By cartPageName = By.xpath("//span[text()='Your Cart']");
-    private By removeBtn = By.cssSelector("[id*='backpack']");
-    private By productInCart = By.xpath("//div[contains(text(), 'Backpack')]");
+    private By removeBtn = By.cssSelector("[id*=remove]");
+    private By productInCart = By.cssSelector(".inventory_item_name");
 
     public CartPage cartPageNameIsDisplayed(){
         displayElements(this.cartPageName);
@@ -16,7 +16,7 @@ public class CartPage extends BasePage{
         return this;
     }
     public CartPage notExistProductToCart(){
-        verifyNoElements(productInCart);
+        verifyNoElements(this.productInCart);
         return this;
     }
 
