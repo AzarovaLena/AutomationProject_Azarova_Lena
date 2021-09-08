@@ -35,14 +35,8 @@ public class BasePage {
             Assert.assertTrue(driver.findElement(element).isDisplayed());
         }
     }
-    protected boolean verifyNoElements(By element) {
-        try
-        {if(driver.findElement(element).isDisplayed())
-            {return false;
-            }return false;
-        } catch(Exception e)
-        {return true;
-        }
+    protected void verifyNoElements(By element) {
+        Assert.assertTrue(driver.findElements(element).size() < 1);
 
     }
 }

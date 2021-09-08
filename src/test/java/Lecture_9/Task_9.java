@@ -6,43 +6,58 @@ import PageObject.CheckOutPage;
 import PageObject.LoginPage;
 import PageObject.ProductsPage;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class Task_9 extends BaseTest {
-    LoginPage loginPage = new LoginPage();
-    ProductsPage productsPage = new ProductsPage();
-    CartPage cartPage = new CartPage();
-    CheckOutPage checkOutPage = new CheckOutPage();
+    LoginPage loginPage;
+    ProductsPage productsPage;
+    CartPage cartPage;
+    CheckOutPage checkOutPage;
 
     @BeforeClass
     public void precondition() {
+        loginPage = new LoginPage();
+        productsPage = new ProductsPage();
+        cartPage = new CartPage();
+        checkOutPage = new CheckOutPage();
         loginPage.openPage();
+
     }
 
-   @Test(priority = 1)
-    public void loginPage_Test1() {
-        loginPage.enterUsername("locked_out_user")
-                .enterPassword("secret_sauce")
-                .clicklLogin()
-                .checkErrorText("Epic sadface: Sorry, this user has been locked out.");
+    @DataProvider(name = "Негативные данные для входа")
+    public Object[][] inputFalseData() {
+        return new Object[][]{
+                {"locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out."},
+                {"  ", "secret_sauce", "Epic sadface: Username and password do not match any user in this service"},
+                {"", "", "Epic sadface: Username and password do not match any user in this service"},
+                {"problem_user", "secret_sauce", ""},
+                {"performance_glitch_user", "secret_sauce", ""}
+        };
+    }
+
+    @Test(dataProvider = "Негативные данные для входа", priority = 1)
+    public void checkErrorsLoginToApp_Test(String userName, String password, String expectedErrorText) {
+        loginPage.enterUsername(userName)
+                .enterPassword(password)
+                .clicklLogin();
+        if (expectedErrorText.isEmpty()) {
+            loginPage.NoErrorText();
+            productsPage.clickMenu()
+                    .clickLogOut();
+        } else {
+            loginPage.checkErrorText(expectedErrorText);
+        }
     }
 
     @Test(priority = 2)
-    public void loginPage_Test2() {
-        loginPage.enterUsername("  ")
-                .enterPassword("secret_sauce")
-                .clicklLogin()
-                .checkErrorText("Epic sadface: Username and password do not match any user in this service");
-    }
-
-    @Test(priority = 3)
-    public void loginPage_Test3() {
+    public void loginPage_Test() {
         loginPage.enterUsername("standard_user")
                 .enterPassword("secret_sauce")
                 .clicklLogin();
     }
 
-   @Test(priority = 4)
+   @Test(priority = 3)
     public void addProducts_Test() {
         productsPage.imgProductsIsDisplayed(12)
                 .titleProductsIsDisplayed(6)
@@ -51,14 +66,14 @@ public class Task_9 extends BaseTest {
                 .existProductToCart();
     }
 
-   @Test(priority = 5)
+   @Test(priority = 4)
     public void removeProducts_Test() {
         cartPage.cartPageNameIsDisplayed()
                 .removeProducts()
                 .notExistProductToCart();
     }
 
-    @Test(priority = 6)
+    @Test(priority = 5)
     public void checkOutProducts_Test1() {
         productsPage.continueShopping()
                 .addProductsToCart()
@@ -70,7 +85,7 @@ public class Task_9 extends BaseTest {
                 .clickContinue()
                 .checkEmptyString("Error: First Name is required");
     }
-    @Test(priority = 7)
+   @Test(priority = 6)
     public void checkOutProducts_Test2(){
         checkOutPage.enterFirstName("Zara")
                 .enterLastName("Simpsons")

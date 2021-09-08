@@ -11,6 +11,8 @@ public class ProductsPage extends BasePage{
     private By moveToCartBtn = By.cssSelector(".shopping_cart_link");
     private By productInCart = By.xpath("//div[contains(text(), 'Backpack')]");
     private By continueShoppingBtn = By.name("continue-shopping");
+    private By menuBtn = By.cssSelector("[id*=menu-btn]");
+    private By logOutBtn = By.cssSelector("[id*=logout]");
 
     public ProductsPage continueShopping  () {
         click(continueShoppingBtn);
@@ -38,6 +40,13 @@ public class ProductsPage extends BasePage{
         return this;
     }
 
-
+    public ProductsPage clickMenu() {
+        click(this.menuBtn);
+        return this;
+    }
+    public ProductsPage clickLogOut() {
+        click(this.logOutBtn);
+        return this;
+    }
 
 }
