@@ -1,12 +1,17 @@
 package Lecture_10_11;
 
 import Driver.BaseTest;
+import Driver.Listener;
 import PageObject.LoginPage;
 import PageObject.ProductsPage;
+import io.qameta.allure.Link;
+import jdk.jfr.Description;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners({Listener.class})
 public class Task_10_11_1 extends BaseTest {
     LoginPage loginPage;
     ProductsPage productsPage;
@@ -29,7 +34,8 @@ public class Task_10_11_1 extends BaseTest {
                 {"performance_glitch_user", "secret_sauce", ""}
         };
     }
-
+    @Description("Checking for login errors")
+    @Link("https://www.saucedemo.com/")
     @Test(dataProvider = "Негативные данные для входа")
     public void checkErrorsLoginToApp_Test(String userName, String password, String expectedErrorText) {
         loginPage.enterUsername(userName)
