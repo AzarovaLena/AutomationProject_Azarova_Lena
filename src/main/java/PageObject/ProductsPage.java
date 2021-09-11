@@ -65,7 +65,6 @@ public class ProductsPage extends BasePage {
         click(this.menuBtn);
         return this;
     }
-
     public ProductsPage clickLogOut() {
         click(this.logOutBtn);
         return this;

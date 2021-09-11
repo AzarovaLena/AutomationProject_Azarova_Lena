@@ -40,11 +40,9 @@ public class BasePage {
             Assert.assertTrue(driver.findElement(element).isDisplayed());
         }
     }
-
     protected void verifyNoElements(By element) {
         Assert.assertTrue(driver.findElements(element).size() < 1);
     }
 }
-
 
 
