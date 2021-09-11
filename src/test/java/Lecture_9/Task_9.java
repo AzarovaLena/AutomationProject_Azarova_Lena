@@ -17,10 +17,10 @@ public class Task_9 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage();
-        productsPage = new ProductsPage();
-        cartPage = new CartPage();
-        checkOutPage = new CheckOutPage();
+        loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
+        checkOutPage = new CheckOutPage(driver);
         loginPage.openPage();
 
     }

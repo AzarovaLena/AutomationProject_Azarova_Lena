@@ -2,12 +2,17 @@ package PageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import static Driver.DriverCreation.getDriver;
-
 public class BasePage {
-    WebDriver driver = getDriver();
+    protected WebDriver driver;
+    WebDriverWait wait;
+
+    protected BasePage (WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, 10);
+    }
 
     protected void open(String url) {
         driver.get(url);
@@ -26,8 +31,8 @@ public class BasePage {
         return driver.findElement(element).getText();
     }
 
-    protected void countElementsIsDisplayed (By element, int amountElements) {
-        Assert.assertTrue( driver.findElements(element).size()== amountElements);
+    protected void countElementsIsDisplayed(By element, int amountElements) {
+        Assert.assertTrue(driver.findElements(element).size() == amountElements);
     }
 
     protected void displayElements(By... elements) {
@@ -37,7 +42,6 @@ public class BasePage {
     }
     protected void verifyNoElements(By element) {
         Assert.assertTrue(driver.findElements(element).size() < 1);
-
     }
 }
 
