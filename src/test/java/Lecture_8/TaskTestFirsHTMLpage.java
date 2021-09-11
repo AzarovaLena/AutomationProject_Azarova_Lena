@@ -52,7 +52,7 @@ public class TaskTestFirsHTMLpage {
         driver.switchTo().window(tabs_windows.get(1));
         Thread.sleep(3000);
         Assert.assertTrue(driver.findElement(By.cssSelector(".search-f")).isDisplayed());
-
+//test
     }
 
 
