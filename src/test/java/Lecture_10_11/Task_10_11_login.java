@@ -17,11 +17,11 @@ public class Task_10_11_login extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage();
-        productsPage = new ProductsPage();
+        loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
         loginPage.openPage();
-
     }
+
     @Description("Checking correct data for login")
     @Link("https://www.saucedemo.com/")
     @Test()

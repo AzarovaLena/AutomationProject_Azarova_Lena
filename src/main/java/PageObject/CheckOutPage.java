@@ -1,9 +1,13 @@
 package PageObject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class CheckOutPage extends BasePage{
+    public CheckOutPage (WebDriver driver) {
+        super(driver);
+    }
     private By checkOutBtn = By.name("checkout");
     private By firstNameStr = By.cssSelector("[data-test=firstName]");
     private By lastNameStr = By.cssSelector("[data-test=lastName]");

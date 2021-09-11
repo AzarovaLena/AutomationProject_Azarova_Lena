@@ -9,13 +9,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class Task_9 extends BaseTest {
-    LoginPage loginPage = new LoginPage();
-    ProductsPage productsPage = new ProductsPage();
-    CartPage cartPage = new CartPage();
-    CheckOutPage checkOutPage = new CheckOutPage();
+    LoginPage loginPage;
+    ProductsPage productsPage;
+    CartPage cartPage;
+    CheckOutPage checkOutPage;
 
     @BeforeClass
     public void precondition() {
+        loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
+        checkOutPage = new CheckOutPage(driver);
         loginPage.openPage();
     }
 

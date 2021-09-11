@@ -17,8 +17,8 @@ public class Task_10_11_2 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        productsPage = new ProductsPage();
-        cartPage = new CartPage();
+        productsPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
     }
 
     @Description("Adding and removing products from the cart")

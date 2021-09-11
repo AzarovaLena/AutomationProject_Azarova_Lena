@@ -1,9 +1,13 @@
 package PageObject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class LoginPage extends BasePage{
+    public LoginPage (WebDriver driver) {
+        super(driver);
+    }
     private By username = By.name("user-name");
     private By password = By.name("password");
     private By loginBtn = By.name("login-button");
