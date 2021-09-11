@@ -37,8 +37,5 @@ public class LoginPage extends BasePage{
         verifyNoElements(this.errorText);
         return this;
     }
-    public LoginPage NoErrorText (){
-        verifyNoElements(this.errorText);
-        return this;
+
     }
-}
