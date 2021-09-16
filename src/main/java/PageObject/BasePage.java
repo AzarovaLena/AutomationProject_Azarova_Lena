@@ -1,5 +1,6 @@
 package PageObject;
 
+import driver.DriverCreation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -16,9 +17,9 @@ public class BasePage {
     protected Properties properties;
 
     protected BasePage (WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 20);
-        actions = new Actions(driver);
+        this.driver = DriverCreation.getDriver();
+        wait = new WebDriverWait(DriverCreation.getDriver(), 20);
+        actions = new Actions(DriverCreation.getDriver());
         properties = PropertyReader.getProperties();
     }
 

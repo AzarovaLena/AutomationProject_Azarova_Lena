@@ -57,7 +57,7 @@ public class DynamicControls extends BasePage {
         wait.until(ExpectedConditions.textToBe(enableText, text));
         return this;
     }
-    public DynamicControls verifyInputEnabled(String text){
+    public DynamicControls verifyInputEnabled(){
         wait.until(ExpectedConditions.elementToBeClickable(input));
         return this;
     }

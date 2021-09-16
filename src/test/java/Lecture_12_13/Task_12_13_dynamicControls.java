@@ -29,6 +29,6 @@ public class Task_12_13_dynamicControls extends BaseTest {
                 .verifyInputDisabled()
                 .clickInputEnableBtn()
                 .verifyEnableText("It's enabled!")
-                .verifyInputEnabled("verify");
+                .verifyInputEnabled();
     }
 }
