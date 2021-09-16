@@ -2,22 +2,33 @@ package PageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import properties.PropertyReader;
+
+import java.util.Properties;
 
 public class BasePage {
     protected WebDriver driver;
-    WebDriverWait wait;
+    protected WebDriverWait wait;
+    protected Actions actions;
+    protected Properties properties;
 
     protected BasePage (WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 20);
+        actions = new Actions(driver);
+        properties = PropertyReader.getProperties();
+    }
+
+    protected void open(){
+        driver.get(properties.getProperty("url"));
     }
 
     protected void open(String url) {
         driver.get(url);
     }
-
     protected void enter(By element, CharSequence... charSequences) {
         driver.findElement(element).clear();
         driver.findElement(element).sendKeys(charSequences);
@@ -36,12 +47,20 @@ public class BasePage {
     }
 
     protected void displayElements(By... elements) {
-        for (By element : elements) {
-            Assert.assertTrue(driver.findElement(element).isDisplayed());
+        for (By element : elements ) {
+            Assert.assertFalse(driver.findElements(element).isEmpty());
         }
     }
     protected void verifyNoElements(By element) {
         Assert.assertTrue(driver.findElements(element).size() < 1);
+    }
+
+    public void pause (Integer seconds){
+        try {
+            Thread.sleep(seconds*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 

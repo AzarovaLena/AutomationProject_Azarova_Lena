@@ -1,9 +1,9 @@
 package Lecture_10_11;
 
-import Driver.BaseTest;
-import Driver.Listener;
-import PageObject.CartPage;
-import PageObject.ProductsPage;
+import driver.BaseTest;
+import testng.Listener;
+import PageObject.saucedemo.CartPage;
+import PageObject.saucedemo.ProductsPage;
 import io.qameta.allure.Link;
 import jdk.jfr.Description;
 import org.testng.annotations.BeforeClass;

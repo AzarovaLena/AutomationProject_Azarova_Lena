@@ -1,10 +1,10 @@
 package Lecture_9;
 
-import Driver.BaseTest;
-import PageObject.CartPage;
-import PageObject.CheckOutPage;
-import PageObject.LoginPage;
-import PageObject.ProductsPage;
+import driver.BaseTest;
+import PageObject.saucedemo.CartPage;
+import PageObject.saucedemo.CheckOutPage;
+import PageObject.saucedemo.LoginPage;
+import PageObject.saucedemo.ProductsPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

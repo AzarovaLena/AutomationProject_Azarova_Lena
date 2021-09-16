@@ -1,10 +1,11 @@
-package PageObject;
+package PageObject.saucedemo;
 
+import PageObject.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
     public LoginPage (WebDriver driver) {
         super(driver);
     }
@@ -14,7 +15,15 @@ public class LoginPage extends BasePage{
     private By errorText = By.tagName("h3");
 
     public LoginPage openPage  () {
-        open("https://www.saucedemo.com/");
+        open();
+        return this;
+    }
+    public LoginPage enterCorrectUsername() {
+        enter(this.username, properties.getProperty("login"));
+        return this;
+    }
+    public LoginPage enterCorrectPassword() {
+        enter(this.password, properties.getProperty("password"));
         return this;
     }
     public LoginPage enterUsername(String username) {

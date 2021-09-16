@@ -1,9 +1,9 @@
 package Lecture_10_11;
 
-import Driver.BaseTest;
-import Driver.Listener;
-import PageObject.LoginPage;
-import PageObject.ProductsPage;
+import driver.BaseTest;
+import testng.Listener;
+import PageObject.saucedemo.LoginPage;
+import PageObject.saucedemo.ProductsPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
 import org.testng.annotations.BeforeClass;
@@ -26,8 +26,8 @@ public class Task_10_11_login extends BaseTest {
     @Link("https://www.saucedemo.com/")
     @Test()
     public void loginToApp_Test() {
-        loginPage.enterUsername("standard_user")
-                .enterPassword("secret_sauce")
+        loginPage.enterCorrectUsername()
+                .enterCorrectPassword()
                 .clicklLogin();
         productsPage.imgProductsIsDisplayed(12);
     }
