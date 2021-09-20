@@ -1,10 +1,11 @@
-package PageObject;
+package PageObject.saucedemo;
 
+import PageObject.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class CheckOutPage extends BasePage{
+public class CheckOutPage extends BasePage {
     public CheckOutPage (WebDriver driver) {
         super(driver);
     }
