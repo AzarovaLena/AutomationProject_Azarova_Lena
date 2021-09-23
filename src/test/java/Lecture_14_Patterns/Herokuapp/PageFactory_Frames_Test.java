@@ -1,20 +1,20 @@
-package Lecture_12_13;
+package Lecture_14_Patterns.Herokuapp;
 
-import PageObject.Herokuapp.Frames;
 import PageObject.Herokuapp.HomePage;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import patterns.Herokuapp.PageFactory_Frames;
 
 import static PageObject.Herokuapp.HomePageLinksEnum.FRAMES;
 
-public class Task_12_13_frames extends BaseTest {
+public class PageFactory_Frames_Test extends BaseTest {
     HomePage homePage;
-    Frames frames;
+    PageFactory_Frames frames;
 
     @BeforeClass
     public void precondition() {
-        frames = new Frames(driver);
+        frames = new PageFactory_Frames(driver);
         homePage = new HomePage(driver);
         homePage.clickLink(FRAMES);
     }

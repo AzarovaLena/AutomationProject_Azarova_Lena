@@ -1,4 +1,4 @@
-package PageObject.herokuapp;
+package PageObject.Herokuapp;
 
 import PageObject.BasePage;
 import org.openqa.selenium.Alert;
@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import static PageObject.herokuapp.HomePageLinksEnum.CONTEXT_MENU;
+import static PageObject.Herokuapp.HomePageLinksEnum.CONTEXT_MENU;
 
 public class ContextMenu extends BasePage {
     private By title = By.tagName("h3");

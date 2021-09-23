@@ -1,4 +1,4 @@
-package PageObject.herokuapp;
+package PageObject.Herokuapp;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import static PageObject.herokuapp.HomePageLinksEnum.DYNAMIC_CONTROLS;
+import static PageObject.Herokuapp.HomePageLinksEnum.DYNAMIC_CONTROLS;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class DynamicControls extends BasePage {

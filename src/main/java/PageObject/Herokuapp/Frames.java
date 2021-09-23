@@ -1,4 +1,4 @@
-package PageObject.herokuapp;
+package PageObject.Herokuapp;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;

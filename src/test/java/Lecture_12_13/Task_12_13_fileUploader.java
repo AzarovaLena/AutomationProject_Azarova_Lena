@@ -1,12 +1,12 @@
 package Lecture_12_13;
 
-import PageObject.herokuapp.FileUploader;
-import PageObject.herokuapp.HomePage;
+import PageObject.Herokuapp.FileUploader;
+import PageObject.Herokuapp.HomePage;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static PageObject.herokuapp.HomePageLinksEnum.FILE_UPLOADER;
+import static PageObject.Herokuapp.HomePageLinksEnum.FILE_UPLOADER;
 
 public class Task_12_13_fileUploader extends BaseTest {
     HomePage homePage;

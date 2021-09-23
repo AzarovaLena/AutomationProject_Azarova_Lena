@@ -2,14 +2,14 @@ package Lecture_10_11;
 
 import driver.BaseTest;
 import testng.Listener;
-import PageObject.saucedemo.ProductsPage;
+import PageObject.Saucedemo.ProductsPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static PageObject.saucedemo.ProductsPage.LinksSort.*;
+import static PageObject.Saucedemo.ProductsPage.LinksSort.*;
 
 @Listeners({Listener.class})
 public class Task_10_11_3 extends BaseTest {

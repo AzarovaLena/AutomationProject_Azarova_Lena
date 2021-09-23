@@ -1,7 +1,7 @@
 package Lecture_12_13;
 
 import driver.BaseTest;
-import PageObject.herokuapp.HomePage;
+import PageObject.Herokuapp.HomePage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
