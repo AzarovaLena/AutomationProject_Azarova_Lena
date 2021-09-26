@@ -14,8 +14,8 @@ public class Task_12_13_dynamicControls extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        dynamicControls = new DynamicControls(driver);
-        homePage = new HomePage(driver);
+        dynamicControls = new DynamicControls();
+        homePage = new HomePage();
         homePage.clickLink(DYNAMIC_CONTROLS);
     }
 

@@ -1,13 +1,13 @@
 package patterns.Saucedemo.ValueObject;
 
-import org.openqa.selenium.WebDriver;
+import PageObject.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
 
-public class CheckOutPage_VObject {
+public class CheckOutPage_VObject extends BasePage {
     @FindBy(name = "checkout")
     WebElement checkOutBtn;
     @FindBy(css = "[data-test=firstName]")
@@ -21,7 +21,7 @@ public class CheckOutPage_VObject {
     @FindBy(css = ".header_secondary_container")
     WebElement checkOutOverview;
 
-    public CheckOutPage_VObject(WebDriver driver){
+    public CheckOutPage_VObject(){
         initElements(driver, this);
     }
     public CheckOutPage_VObject moveToCheckOutPage(){

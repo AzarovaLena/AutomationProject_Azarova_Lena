@@ -17,10 +17,10 @@ public class Task_9 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage(driver);
-        productsPage = new ProductsPage(driver);
-        cartPage = new CartPage(driver);
-        checkOutPage = new CheckOutPage(driver);
+        loginPage = new LoginPage();
+        productsPage = new ProductsPage();
+        cartPage = new CartPage();
+        checkOutPage = new CheckOutPage();
         loginPage.openPage();
 
     }
@@ -37,7 +37,7 @@ public class Task_9 extends BaseTest {
     }
 
     @Test(dataProvider = "Негативные данные для входа", priority = 1)
-    public void checkErrorsLoginToApp_Test(String userName, String password, String expectedErrorText) {
+    public void checkErrorsLoginToApp_Test(String userName, String password, String expectedErrorText)  {
         loginPage.enterUsername(userName)
                 .enterPassword(password)
                 .clicklLogin();
@@ -51,7 +51,7 @@ public class Task_9 extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void loginPage_Test() {
+    public void loginPage_Test()  {
         loginPage.enterUsername("standard_user")
                 .enterPassword("secret_sauce")
                 .clicklLogin();

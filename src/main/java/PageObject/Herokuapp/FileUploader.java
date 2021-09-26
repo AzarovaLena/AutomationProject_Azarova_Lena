@@ -2,7 +2,6 @@ package PageObject.Herokuapp;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class FileUploader extends BasePage {
@@ -11,11 +10,6 @@ public class FileUploader extends BasePage {
      private By fileSubmitBtn = By.id("file-submit");
      private By uploadedFile = By.id("uploaded-files");
     private String userDir = System.getProperty("user.dir");
-
-
-    public FileUploader (WebDriver driver){
-        super(driver);
-    }
 
     public FileUploader verifyPageTitle(String title) {
         Assert.assertEquals(getElementText(this.title), title);

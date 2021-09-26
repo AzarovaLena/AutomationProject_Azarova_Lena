@@ -9,7 +9,7 @@ public class Task_12_13_homePage extends BaseTest {
     HomePage homePage;
     @BeforeClass
     public void precondition(){
-        homePage = new HomePage(driver);
+        homePage = new HomePage();
     }
     @Test
     public void verifyHomePage_Test(){

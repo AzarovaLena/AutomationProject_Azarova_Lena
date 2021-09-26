@@ -14,8 +14,8 @@ public class Task_12_13_fileUploader extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        fileUploader = new FileUploader(driver);
-        homePage = new HomePage(driver);
+        fileUploader = new FileUploader();
+        homePage = new HomePage();
         homePage.clickLink(FILE_UPLOADER);
 
     }

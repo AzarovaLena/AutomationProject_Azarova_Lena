@@ -2,13 +2,10 @@ package PageObject.Saucedemo;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class LoginPage extends BasePage {
-    public LoginPage (WebDriver driver) {
-        super(driver);
-    }
+
     private By username = By.name("user-name");
     private By password = By.name("password");
     private By loginBtn = By.name("login-button");
@@ -34,7 +31,7 @@ public class LoginPage extends BasePage {
         enter(this.password, password);
         return this;
     }
-    public LoginPage clicklLogin () {
+    public LoginPage clicklLogin ()  {
         click(this.loginBtn);
         return this;
     }

@@ -12,17 +12,17 @@ import static PageObject.Herokuapp.HomePageLinksEnum.FORM_AUTHENTICATION;
 public class Builder_LoginPage_Test extends BaseTest {
     HomePage homePage;
     LoginPage_BObject loginPage;
-    LoginPage_Builder correctData;
+    LoginPage_Builder correctData = LoginPage_Builder.builder()
+            .userName("tomsmith")
+            .password("SuperSecretPassword!")
+            .build();
 
     @BeforeClass
     public void precondition() {
-        homePage = new HomePage(driver);
+        homePage = new HomePage();
         homePage.clickLink(FORM_AUTHENTICATION);
-        loginPage = new LoginPage_BObject(driver);
-        correctData = new LoginPage_Builder.Builder()
-                .withUserName("tomsmith")
-                .withPassword("SuperSecretPassword!")
-                .build();
+        loginPage = new LoginPage_BObject();
+
     }
     @Test
     public void verifyLoginPage(){

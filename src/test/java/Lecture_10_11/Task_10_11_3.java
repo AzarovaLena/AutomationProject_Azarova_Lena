@@ -17,7 +17,7 @@ public class Task_10_11_3 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        productsPage = new ProductsPage(driver);
+        productsPage = new ProductsPage();
     }
 
     @Description("Checking the sorting in the container on the product page")

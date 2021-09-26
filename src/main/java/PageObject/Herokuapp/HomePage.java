@@ -2,7 +2,6 @@ package PageObject.Herokuapp;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage {
     private By title = By.tagName ("h1");
@@ -10,9 +9,7 @@ public class HomePage extends BasePage {
     private By getLink (HomePageLinksEnum homePageLinksEnum){
         return By.linkText(homePageLinksEnum.getLinkText());
     }
-    public HomePage(WebDriver driver) {
-        super(driver);
-    }
+
     public HomePage openPage (){
         open();
         return this;

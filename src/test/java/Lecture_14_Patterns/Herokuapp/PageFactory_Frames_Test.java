@@ -14,8 +14,8 @@ public class PageFactory_Frames_Test extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        frames = new PageFactory_Frames(driver);
-        homePage = new HomePage(driver);
+        frames = new PageFactory_Frames();
+        homePage = new HomePage();
         homePage.clickLink(FRAMES);
     }
     @Test

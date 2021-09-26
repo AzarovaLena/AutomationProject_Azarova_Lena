@@ -2,7 +2,6 @@ package PageObject.Herokuapp;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
@@ -18,10 +17,6 @@ public class DynamicControls extends BasePage {
     private By enableInputBtn = By.cssSelector("#input-example>button");
     private By enableText = By.cssSelector("#input-example>p");
 
-
-    public DynamicControls(WebDriver driver) {
-        super(driver);
-    }
 
     public DynamicControls verifyPageTitle() {
         Assert.assertEquals(getElementText(title), DYNAMIC_CONTROLS.getLinkText());

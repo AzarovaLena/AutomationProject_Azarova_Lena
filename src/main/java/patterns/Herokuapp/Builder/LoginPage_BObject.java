@@ -2,7 +2,6 @@ package patterns.Herokuapp.Builder;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class LoginPage_BObject extends BasePage {
@@ -15,10 +14,7 @@ public class LoginPage_BObject extends BasePage {
     private By logoutBtn = By.cssSelector("[class*=button]");
     private By errorText =By.id("flash");
 
-    public LoginPage_BObject(WebDriver driver) {
-        super(driver);
-    }
-    public LoginPage_BObject verifyPageTitle(String expectedTitle) {
+        public LoginPage_BObject verifyPageTitle(String expectedTitle) {
         Assert.assertEquals(getElementText(title), expectedTitle);
         return this;
     }
