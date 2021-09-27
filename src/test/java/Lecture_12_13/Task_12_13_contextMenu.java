@@ -1,12 +1,12 @@
 package Lecture_12_13;
 
 import driver.BaseTest;
-import PageObject.herokuapp.ContextMenu;
-import PageObject.herokuapp.HomePage;
+import PageObject.Herokuapp.ContextMenu;
+import PageObject.Herokuapp.HomePage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static PageObject.herokuapp.HomePageLinksEnum.CONTEXT_MENU;
+import static PageObject.Herokuapp.HomePageLinksEnum.CONTEXT_MENU;
 
 public class Task_12_13_contextMenu extends BaseTest {
     ContextMenu contextMenu;

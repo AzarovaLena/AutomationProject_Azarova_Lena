@@ -1,12 +1,12 @@
 package Lecture_12_13;
 
 import driver.BaseTest;
-import PageObject.herokuapp.DynamicControls;
-import PageObject.herokuapp.HomePage;
+import PageObject.Herokuapp.DynamicControls;
+import PageObject.Herokuapp.HomePage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static PageObject.herokuapp.HomePageLinksEnum.DYNAMIC_CONTROLS;
+import static PageObject.Herokuapp.HomePageLinksEnum.DYNAMIC_CONTROLS;
 
 public class Task_12_13_dynamicControls extends BaseTest {
     DynamicControls dynamicControls;
