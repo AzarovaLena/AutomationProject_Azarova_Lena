@@ -18,8 +18,8 @@ public class Task_10_11_1 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage(driver);
-        productsPage = new ProductsPage(driver);
+        loginPage = new LoginPage();
+        productsPage = new ProductsPage();
         loginPage.openPage();
 
     }
@@ -37,7 +37,7 @@ public class Task_10_11_1 extends BaseTest {
     @Description("Checking for login errors")
     @Link("https://www.saucedemo.com/")
     @Test(dataProvider = "Негативные данные для входа")
-    public void checkErrorsLoginToApp_Test(String userName, String password, String expectedErrorText) {
+    public void checkErrorsLoginToApp_Test(String userName, String password, String expectedErrorText)  {
         loginPage.enterUsername(userName)
                 .enterPassword(password)
                 .clicklLogin();

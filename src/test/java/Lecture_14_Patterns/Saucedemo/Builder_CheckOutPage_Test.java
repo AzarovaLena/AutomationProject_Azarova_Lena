@@ -14,12 +14,12 @@ public class Builder_CheckOutPage_Test extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-       checkOutPage_bObject = new CheckOutPage_BObject(driver);
-        pageFactory_cartPage = new PageFactory_CartPage(driver);
-        checkOutPage_builder = new CheckOutPage_Builder.Builder()
-                .withFirstName("FirstName")
-                .withLastName("LastName")
-                .withZipCode("11111")
+       checkOutPage_bObject = new CheckOutPage_BObject();
+        pageFactory_cartPage = new PageFactory_CartPage();
+        checkOutPage_builder = CheckOutPage_Builder.builder()
+                .firstName("FirstName")
+                .lastName("LastName")
+                .zipCode("11111")
                 .build();
     }
 

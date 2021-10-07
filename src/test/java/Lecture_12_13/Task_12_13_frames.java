@@ -14,8 +14,8 @@ public class Task_12_13_frames extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        frames = new Frames(driver);
-        homePage = new HomePage(driver);
+        frames = new Frames();
+        homePage = new HomePage();
         homePage.clickLink(FRAMES);
     }
     @Test

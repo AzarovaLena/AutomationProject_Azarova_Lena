@@ -10,7 +10,7 @@ public class PageFactory_CartPage_Test extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        pageFactory_cartPage = new PageFactory_CartPage(driver);
+        pageFactory_cartPage = new PageFactory_CartPage();
     }
 
     @Test

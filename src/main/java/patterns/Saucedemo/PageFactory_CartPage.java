@@ -1,7 +1,6 @@
 package patterns.Saucedemo;
 
 import PageObject.BasePage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -20,8 +19,7 @@ public class PageFactory_CartPage extends BasePage {
     @FindBy (css = "[name*=add-to-cart]")
     WebElement addToCartBtn;
 
-    public PageFactory_CartPage (WebDriver driver){
-        super (driver);
+    public PageFactory_CartPage (){
         initElements(driver, this);
     }
     public PageFactory_CartPage addProducts(){

@@ -17,9 +17,9 @@ public class ValueObject_LoginPage_Test extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        homePage = new HomePage(driver);
+        homePage = new HomePage();
         homePage.clickLink(FORM_AUTHENTICATION);
-        loginPage = new LoginPage_VObject(driver);
+        loginPage = new LoginPage_VObject();
         correctData = new LoginPage_ValueObject("tomsmith", "SuperSecretPassword!");
         incorrectData = new LoginPage_ValueObject("User", "11111");
     }

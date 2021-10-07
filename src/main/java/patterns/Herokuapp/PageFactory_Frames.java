@@ -2,7 +2,6 @@ package patterns.Herokuapp;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -17,8 +16,7 @@ public class PageFactory_Frames extends BasePage {
     @FindBy (css = "#tinymce > p")
     WebElement iframeText;
 
-    public PageFactory_Frames(WebDriver driver) {
-        super(driver);
+    public PageFactory_Frames() {
         initElements(driver, this);
     }
 

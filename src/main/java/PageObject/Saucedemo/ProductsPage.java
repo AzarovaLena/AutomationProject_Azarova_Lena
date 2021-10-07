@@ -2,7 +2,6 @@ package PageObject.Saucedemo;
 
 import PageObject.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import java.util.Collections;
@@ -10,9 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ProductsPage extends BasePage {
-    public ProductsPage (WebDriver driver) {
-        super(driver);
-    }
+
     private By imgProducts = By.cssSelector(".inventory_item_img");
     private By titleProducts = By.cssSelector(".inventory_item_name");
     private By PriceProducts = By.cssSelector(".inventory_item_price");

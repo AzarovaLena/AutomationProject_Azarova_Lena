@@ -14,8 +14,8 @@ public class Task_12_13_contextMenu extends BaseTest {
 
     @BeforeClass
     public void precondition(){
-        contextMenu = new ContextMenu(driver);
-        homePage = new HomePage(driver);
+        contextMenu = new ContextMenu();
+        homePage = new HomePage();
         homePage.clickLink(CONTEXT_MENU);
     }
     @Test
