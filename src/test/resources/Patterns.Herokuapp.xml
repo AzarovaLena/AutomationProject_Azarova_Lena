@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Lecture_14_Patterns_Herokuapp" >
+    <parameter name="env" value="herokuapp"></parameter>
+    <test name="checkDynamicControlsPage" enabled="false">
+        <classes>
+            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
+            <class name="patterns_Test.herokuapp.PageFactory_Frames_Test">
+            </class>
+        </classes>
+    </test>
+    <test name="checkLoginPage_ValueObject" enabled="false">
+        <classes>
+            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
+            <class name="patterns_Test.herokuapp.ValueObject_LoginPage_Test">
+            </class>
+        </classes>
+    </test>
+    <test name="checkLoginPage_Builder" >
+        <classes>
+            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
+            <class name="patterns_Test.herokuapp.Builder_LoginPage_Test">
+            </class>
+        </classes>
+    </test>
+
+</suite>
