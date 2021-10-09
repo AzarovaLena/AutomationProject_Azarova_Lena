@@ -1,4 +1,4 @@
-package b_FirsHTMLPage;
+package FirsHTMLPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

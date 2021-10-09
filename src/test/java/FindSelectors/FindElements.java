@@ -1,4 +1,4 @@
-package a_Selectors;
+package FindSelectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

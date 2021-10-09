@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 
-public class First_API_tests {
+public class API_tests {
     @BeforeTest
     public void preconditions() {
         RestAssured.baseURI = "https://reqres.in/";
