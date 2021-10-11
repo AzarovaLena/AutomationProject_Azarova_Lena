@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "MoodPanda_Selenide" parallel="tests">
+
+    <test name="HomePage" enabled="false">
+        <classes>
+            <class name="MoodPanda_Selenide_Test.HomePage_Test"></class>
+        </classes>
+    </test>
+    <test name="LoginPage" enabled="false">
+        <classes>
+            <class name="MoodPanda_Selenide_Test.LoginPage_Test"></class>
+        </classes>
+    </test>
+    <test name="RegistrationForm" enabled="false">
+        <classes>
+            <class name="MoodPanda_Selenide_Test.RegistrationForm_Test"></class>
+        </classes>
+    </test>
+    <test name="FAQs">
+        <classes>
+            <class name="MoodPanda_Selenide_Test.FAQs_Test"></class>
+        </classes>
+    </test>
+
+</suite>
