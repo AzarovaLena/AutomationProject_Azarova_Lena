@@ -4,22 +4,22 @@
 
     <test name="HomePage" enabled="false">
         <classes>
-            <class name="MoodPanda_Selenide_Test.HomePage_Test"></class>
+            <class name="pageObject_Test.MoodPanda_Selenide_Test.HomePage_Test"></class>
         </classes>
     </test>
     <test name="LoginPage" enabled="false">
         <classes>
-            <class name="MoodPanda_Selenide_Test.LoginPage_Test"></class>
+            <class name="pageObject_Test.MoodPanda_Selenide_Test.LoginPage_Test"></class>
         </classes>
     </test>
     <test name="RegistrationForm" enabled="false">
         <classes>
-            <class name="MoodPanda_Selenide_Test.RegistrationForm_Test"></class>
+            <class name="pageObject_Test.MoodPanda_Selenide_Test.RegistrationForm_Test"></class>
         </classes>
     </test>
     <test name="FAQs">
         <classes>
-            <class name="MoodPanda_Selenide_Test.FAQs_Test"></class>
+            <class name="pageObject_Test.MoodPanda_Selenide_Test.FAQs_Test"></class>
         </classes>
     </test>
 

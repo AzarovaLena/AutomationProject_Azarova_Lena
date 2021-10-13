@@ -1,4 +1,4 @@
-package MoodPanda_Selenide_Test;
+package pageObject_Test.MoodPanda_Selenide_Test;
 
 import PageObject.MoodPanda_Selenide.HomePage;
 import driver.BaseTestSelenide;
