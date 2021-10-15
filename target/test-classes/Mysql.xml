@@ -2,17 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name = "Mysql" >
 
-    <test name="Select" enabled="false">
+    <test name="Select" >
         <classes>
             <class name="mysql_Test.Select_Test"></class>
         </classes>
     </test>
-    <test name="Insert" enabled="false">
+    <test name="Insert" >
         <classes>
             <class name="mysql_Test.Insert_Test"></class>
         </classes>
     </test>
-    <test name="Delete" enabled="false">
+    <test name="Delete" >
         <classes>
             <class name="mysql_Test.Delete_Test"></class>
         </classes>

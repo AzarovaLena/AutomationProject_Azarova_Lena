@@ -4,22 +4,22 @@
     <parameter name="env" value="herokuapp"></parameter>
     <test name="checkDynamicControlsPage" enabled="false">
         <classes>
-            <class name="Lecture_12_13.Task_12_13_homePage"></class>
-            <class name="Lecture_14_Patterns.Herokuapp.PageFactory_Frames_Test">
+            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
+            <class name="patterns_Test.herokuapp.PageFactory_Frames_Test">
             </class>
         </classes>
     </test>
     <test name="checkLoginPage_ValueObject" enabled="false">
         <classes>
-            <class name="Lecture_12_13.Task_12_13_homePage"></class>
-            <class name="Lecture_14_Patterns.Herokuapp.ValueObject_LoginPage_Test">
+            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
+            <class name="patterns_Test.herokuapp.ValueObject_LoginPage_Test">
             </class>
         </classes>
     </test>
     <test name="checkLoginPage_Builder" >
         <classes>
-            <class name="Lecture_12_13.Task_12_13_homePage"></class>
-            <class name="Lecture_14_Patterns.Herokuapp.Builder_LoginPage_Test">
+            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
+            <class name="patterns_Test.herokuapp.Builder_LoginPage_Test">
             </class>
         </classes>
     </test>

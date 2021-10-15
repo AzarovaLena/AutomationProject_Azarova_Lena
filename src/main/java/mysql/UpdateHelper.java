@@ -9,7 +9,7 @@ public class UpdateHelper extends DBConnector{
         return new UpdateHelper();
     }
 
-    public UpdateHelper update (String table) {
+    public UpdateHelper table (String table) {
         this.table = table;
         return this;
     }
@@ -24,9 +24,9 @@ public class UpdateHelper extends DBConnector{
         return this;
     }
 
-    public void execute() {
+    public void executeUp() {
         try {
-            getStatement().executeUpdate("UPDATE " + table + " SET" + set +  " WHERE " + where);
+            getStatement().executeUpdate("update " + table + " set" + set +  " where " + where);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -9,7 +9,7 @@ public class Update_Test {
 
     @Test
     public void updateUser1() {
-        getUpdate().update("user").set("id= 112").where("id= 22").execute();
+        getUpdate().table("user").set("id=120").where("id=201").executeUp();
         getSelect().select("*").from("user").getListData().forEach(System.out::println);
     }
 }
