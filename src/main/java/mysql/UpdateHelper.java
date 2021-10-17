@@ -26,7 +26,7 @@ public class UpdateHelper extends DBConnector{
 
     public void executeUp() {
         try {
-            getStatement().executeUpdate("update " + table + " set" + set +  " where " + where);
+            getStatement().executeUpdate("update " + table + " set " + set +  " where " + where);
         } catch (Exception e) {
             e.printStackTrace();
         }
