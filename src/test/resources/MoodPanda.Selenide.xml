@@ -2,17 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name = "MoodPanda_Selenide" parallel="tests">
 
-    <test name="HomePage" enabled="false">
+    <test name="HomePage" >
         <classes>
             <class name="pageObject_Test.MoodPanda_Selenide_Test.HomePage_Test"></class>
         </classes>
     </test>
-    <test name="LoginPage" enabled="false">
+    <test name="LoginPage" >
         <classes>
             <class name="pageObject_Test.MoodPanda_Selenide_Test.LoginPage_Test"></class>
         </classes>
     </test>
-    <test name="RegistrationForm" enabled="false">
+    <test name="RegistrationForm" >
         <classes>
             <class name="pageObject_Test.MoodPanda_Selenide_Test.RegistrationForm_Test"></class>
         </classes>
