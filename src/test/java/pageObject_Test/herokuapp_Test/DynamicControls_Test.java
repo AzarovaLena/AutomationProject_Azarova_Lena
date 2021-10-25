@@ -1,4 +1,4 @@
-package pageObject_Test.Herokuapp_Test;
+package pageObject_Test.herokuapp_Test;
 
 import driver.BaseTest;
 import pageObject.herokuapp.DynamicControls;

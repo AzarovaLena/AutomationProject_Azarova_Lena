@@ -1,4 +1,4 @@
-package pageObject_Test.Saucedemo_Test;
+package pageObject_Test.saucedemo_Test;
 
 import driver.BaseTest;
 import pageObject.saucedemo.CartPage;

@@ -1,7 +1,7 @@
-package pageObject_Test.MoodPanda_Selenide_Test;
+package pageObject_Test.moodPanda_Selenide_Test;
 
-import PageObject.MoodPanda_Selenide.LoginPage;
-import PageObject.MoodPanda_Selenide.RegistrationForm;
+import pageObject.moodPanda_Selenide.LoginPage;
+import pageObject.moodPanda_Selenide.RegistrationForm;
 import driver.BaseTestSelenide;
 import jdk.jfr.Description;
 import org.testng.annotations.BeforeTest;

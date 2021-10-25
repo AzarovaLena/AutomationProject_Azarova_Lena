@@ -19,3 +19,4 @@ ___
     
   (this command runs Mysql.xml, required configurations are written in pom.xml)
 ### result:
+![alt text](file/Screenshot_4.png)

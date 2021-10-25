@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="pageObject_Test.Herokuapp_Test.c_Saucedemo_Test_2" parallel="tests">
+<suite name="pageObject_Test.herokuapp_Test.c_Saucedemo_Test_2" parallel="tests">
     <parameter name="env" value="saucedemo"></parameter>
     <test name="VerifyLoginPage" >
         <classes>
-            <class name="pageObject_Test.Saucedemo_Test_2.LoginPage_Test">
+            <class name="pageObject_Test.saucedemo_Test_2.LoginPage_Test">
             </class>
         </classes>
     </test>
     <test name="addAndRemoveProducts">
         <classes>
-            <class name="pageObject_Test.Saucedemo_Test_2.CorrectLoginPage_Test"></class>
-            <class name="pageObject_Test.Saucedemo_Test_2.ProductsPage_Test"></class>
+            <class name="pageObject_Test.saucedemo_Test_2.CorrectLoginPage_Test"></class>
+            <class name="pageObject_Test.saucedemo_Test_2.ProductsPage_Test"></class>
         </classes>
     </test>
     <test name="SortProducts" >
         <classes>
-            <class name="pageObject_Test.Saucedemo_Test_2.CorrectLoginPage_Test"></class>
-            <class name="pageObject_Test.Saucedemo_Test_2.ProductsPageSort_Test"></class>
+            <class name="pageObject_Test.saucedemo_Test_2.CorrectLoginPage_Test"></class>
+            <class name="pageObject_Test.saucedemo_Test_2.ProductsPageSort_Test"></class>
         </classes>
     </test>
 </suite>
