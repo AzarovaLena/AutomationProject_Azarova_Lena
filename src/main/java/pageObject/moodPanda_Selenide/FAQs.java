@@ -1,4 +1,4 @@
-package PageObject.MoodPanda_Selenide;
+package pageObject.moodPanda_Selenide;
 
 import com.codeborne.selenide.SelenideElement;
 

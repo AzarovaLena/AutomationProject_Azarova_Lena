@@ -1,4 +1,4 @@
-package pageObject_Test.Herokuapp_Test;
+package pageObject_Test.herokuapp_Test;
 
 import pageObject.herokuapp.FileUploader;
 import pageObject.herokuapp.HomePage;

@@ -1,4 +1,4 @@
-package REST_API;
+package rest_api;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

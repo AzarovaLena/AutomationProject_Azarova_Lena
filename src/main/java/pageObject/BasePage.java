@@ -48,6 +48,7 @@ public class BasePage {
     protected String getElementText(By element) {
        log.info("Find element :: " + element);
         return driver.findElement(element).getText();
+        
     }
 
     protected void countElementsIsDisplayed(By element, int amountElements) {log.info("Find elements :: " + element);

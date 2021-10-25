@@ -1,4 +1,4 @@
-package pageObject_Test.Saucedemo_Test_2;
+package pageObject_Test.saucedemo_Test_2;
 
 import driver.BaseTest;
 import testng.Listener;

@@ -4,21 +4,21 @@
     <parameter name="env" value="saucedemo"></parameter>
     <test name="checkCartPage">
         <classes>
-            <class name="pageObject_Test.Saucedemo_Test_2.CorrectLoginPage_Test"></class>
+            <class name="pageObject_Test.saucedemo_Test_2.CorrectLoginPage_Test"></class>
             <class name="patterns_Test.saucedemo.PageFactory_CartPage_Test">
             </class>
         </classes>
     </test>
     <test name="verifyCheckOutPageWithValueObject">
         <classes>
-            <class name="pageObject_Test.Saucedemo_Test_2.CorrectLoginPage_Test"></class>
+            <class name="pageObject_Test.saucedemo_Test_2.CorrectLoginPage_Test"></class>
             <class name="patterns_Test.saucedemo.ValueObject_CheckOutPage_Test">
             </class>
         </classes>
     </test>
     <test name="verifyCheckOutPageWithBuilder" >
         <classes>
-            <class name="pageObject_Test.Saucedemo_Test_2.CorrectLoginPage_Test"></class>
+            <class name="pageObject_Test.saucedemo_Test_2.CorrectLoginPage_Test"></class>
             <class name="patterns_Test.saucedemo.Builder_CheckOutPage_Test">
             </class>
         </classes>
