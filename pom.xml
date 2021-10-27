@@ -20,6 +20,7 @@
         <webdrivermanager.vertion>5.0.3</webdrivermanager.vertion>
         <selenide.vertion>5.25.0</selenide.vertion>
         <mysgl.vertiom>8.0.26</mysgl.vertiom>
+        <cucumber.version>4.7.1</cucumber.version>
         <suite></suite>
 
     </properties>
@@ -120,6 +121,21 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysgl.vertiom}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
         </dependency>
 
     </dependencies>

@@ -5,27 +5,27 @@
     
     <test name="Context Menu">
         <classes>
-            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
-            <class name="pageObject_Test.Herokuapp_Test.ContextMenu_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.HomePage_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.ContextMenu_Test"></class>
         </classes>
     </test>
     <test name="Dynamic Controls">
         <classes>
-            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
-            <class name="pageObject_Test.Herokuapp_Test.DynamicControls_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.HomePage_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.DynamicControls_Test"></class>
         </classes>
     </test>
     <test name="File Uploader">
         <classes>
-            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
-            <class name="pageObject_Test.Herokuapp_Test.FileUploader_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.HomePage_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.FileUploader_Test"></class>
         </classes>
     </test>
 
     <test name="Frames">
         <classes>
-            <class name="pageObject_Test.Herokuapp_Test.HomePage_Test"></class>
-            <class name="pageObject_Test.Herokuapp_Test.Frames_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.HomePage_Test"></class>
+            <class name="pageObject_Test.herokuapp_Test.Frames_Test"></class>
         </classes>
     </test>
 </suite>

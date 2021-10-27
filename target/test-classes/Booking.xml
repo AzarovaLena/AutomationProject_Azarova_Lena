@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Booking" >
+    <parameter name="env" value="booking"/>
+    <listeners>
+        <listener class-name="testng.Listener"/>
+    </listeners>
+    <test name="SearchHotel">
+        <classes>
+            <class name="pageObject_Test.booking_Test.Cucumber"></class>
+        </classes>
+    </test>
+</suite>
